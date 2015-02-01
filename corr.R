@@ -1,6 +1,6 @@
 corr<-function(directory,threshold=0){
   
-  file<-list.files(directory,"\\", pattern="*.csv", full.names=TRUE);
+  file<-list.files(directory, pattern="*.csv", full.names=TRUE);
   data.frame<-lapply(file,read.csv);
   table<-do.call(rbind,data.frame);
   good<-complete.cases(table);
